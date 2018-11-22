@@ -9,6 +9,7 @@ export interface SchotterProps {
   rows: number;
   columns: number;
   gap: number;
+  schotter: boolean;
 }
 
 /**
@@ -17,7 +18,7 @@ export interface SchotterProps {
  * @example
  * <Schotter rows=22 columns=12 gap=0 />
  */
-export const Schotter: React.SFC<SchotterProps> = ({ rows, columns, gap }) => {
+export const Schotter: React.SFC<SchotterProps> = ({ rows, columns, gap, schotter }) => {
   const total = columns * rows;
   const style = {
     gridTemplateRows: `repeat(${rows}, 1fr)`,
@@ -30,7 +31,7 @@ export const Schotter: React.SFC<SchotterProps> = ({ rows, columns, gap }) => {
   return (
     <article style={style} className="grid">
       {rangeArray(total).map(i => (
-        <SchotterCube key={i} index={i} total={total} rows={rows} />
+        <SchotterCube key={i} index={i} total={total} rows={rows} schotter={schotter} />
       ))}
     </article>
   );

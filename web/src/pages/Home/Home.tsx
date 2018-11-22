@@ -1,6 +1,5 @@
 import * as React from 'react'; // This is needed to render jsx with inferno
 import { useState } from 'react';
-import { debounce } from 'lodash';
 
 import './Home.css';
 import { Schotter } from '../../components/Schotter';
@@ -30,32 +29,23 @@ const useRange = (initialValue: number) => {
  * <Home text="Hello World" />
  */
 export const Home: React.SFC<HomeProps> = ({ title }) => {
-  const columnRange = useRange(12);
-  const rowRange = useRange(22);
-  const gapRange = useRange(0);
-  const schotter = {
-    columns: columnRange.value,
-    rows: rowRange.value,
-    gap: gapRange.value,
+  const [schotter, setSchotter] = useState(false);
+  const schotterProps = {
+    columns: 12,
+    rows: 16,
+    gap: 1,
+    schotter,
   };
-  const shared = {
-    className: 'pa-3',
-    min: '0',
-    max: '40',
-  };
+  const toggleSchotter = () => setSchotter(s => !s);
 
   return (
-    <section className="page-home">
-      <header className="home-header pl-7 fd-row fg-6">
-        <h1 className="pa-5">{title}</h1>
-        <label htmlFor="column">Columns</label>
-        <input name="column" {...shared} {...columnRange} />
-        <label htmlFor="row">Rows</label>
-        <input name="row" {...shared} {...rowRange} />
-        <label htmlFor="gap">Gap</label>
-        <input name="gap" {...shared} {...gapRange} />
+    <section className="page-home pa-7 ma-7">
+      <header className="home-header fd-column fg-4 pa-7 ma-7">
+        <button className={schotter ? 'thm-secondary' : 'thm-primary'} onClick={toggleSchotter}>
+          Schotter
+        </button>
       </header>
-      <Schotter {...schotter} />
+      <Schotter {...schotterProps} />
     </section>
   );
 };
