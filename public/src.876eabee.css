@@ -1,0 +1,1 @@
+.home-header{display:grid;align-items:center;justify-content:center}.grid{display:grid;place-items:start}.grid>*{width:100%}.grid>:before{content:"";display:inline-block;width:1px;height:0;padding-bottom:100%}
