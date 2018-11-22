@@ -15,7 +15,7 @@ export interface SchotterProps {
  * @render react
  * @name Schotter
  * @example
- * <Schotter rows=10 columns=6 size=150 gap=10 />
+ * <Schotter rows=22 columns=12 gap=0 />
  */
 export const Schotter: React.SFC<SchotterProps> = ({ rows, columns, gap }) => {
   const total = columns * rows;
@@ -23,7 +23,8 @@ export const Schotter: React.SFC<SchotterProps> = ({ rows, columns, gap }) => {
     gridTemplateRows: `repeat(${rows}, 1fr)`,
     gridTemplateColumns: `repeat(${columns}, 1fr)`,
     gridGap: `${gap}px`,
-    padding: `calc(100% / ${rows})`
+    paddingRight: `calc(100% / ${rows})`,
+    paddingLeft: `calc(100% / ${rows})`,
   };
 
   return (

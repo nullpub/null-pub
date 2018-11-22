@@ -17,22 +17,19 @@ export interface SchotterCubeProps {
  * @example
  * <SchotterCube text="Hello World" />
  */
-export const SchotterCube: React.SFC<SchotterCubeProps> = ({
-  index,
-  total,
-  rows
-}) => {
+export const SchotterCube: React.SFC<SchotterCubeProps> = ({ index, total, rows }) => {
   const drift = index / total;
   const range = drift * drift * drift * 50;
-  const middle = Math.floor(rows / 2);
-  const direction = mod(index, rows) <= middle ? -1 : 1;
-  const rand = [
-    randomIntInRange(0, direction * range),
-    randomIntInRange(0, direction * range),
-    randomIntInRange(drift * -90, drift * 90)
-  ];
+  const tx =
+    mod(index, rows) === 0
+      ? randomIntInRange(0, range)
+      : mod(index + 1, rows) === 0
+      ? randomIntInRange(0, -1 * range)
+      : randomIntInRange((-1 * range) / 2, range / 2);
+  const ty = randomIntInRange((-1 * range) / 2, range / 2);
+  const tr = randomIntInRange(drift * -90, drift * 90);
   const style = {
-    transform: `translate(${rand[0]}%, ${rand[1]}%) rotate(${rand[2]}deg)`
+    transform: `translate(${tx}%, ${ty}%) rotate(${tr}deg)`,
   };
 
   return <section style={style} className={`ba-1 bs-dotted `} />;
