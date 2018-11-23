@@ -12,7 +12,7 @@ export interface HomeProps {
 // Helper functions
 const getValue = (e: InputEvent) => e.currentTarget.value;
 
-const useRange = (initialValue: number) => {
+export const useRange = (initialValue: number) => {
   const type = 'range';
   const [value, setState] = useState(initialValue);
   const onChange = (e: InputEvent) => {
@@ -28,11 +28,11 @@ const useRange = (initialValue: number) => {
  * @example
  * <Home text="Hello World" />
  */
-export const Home: React.SFC<HomeProps> = ({ title }) => {
-  const [schotter, setSchotter] = useState(false);
+export const Home: React.SFC<HomeProps> = () => {
+  const [schotter, setSchotter] = useState(true);
   const schotterProps = {
     columns: 12,
-    rows: 16,
+    rows: 22,
     gap: 1,
     schotter,
   };
