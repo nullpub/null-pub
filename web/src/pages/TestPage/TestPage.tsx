@@ -19,14 +19,14 @@ const TestPage: React.SFC<TestPageProps> = () => {
     <article className="page-test">
       <div className="fd-column fg-4 pa-4">
         <div className="flex-sm-c2r fg-4">
-          <Input label="Primary" />
-          <Input label="Secondary" />
-          <Input label="Accent" />
-          <Input label="Light" />
-          <Input label="Dark" />
-          <Input label="Info" classes={{ theme: 'tc-info ' }} validators={[maxLength(1)]} />
-          <Input label="Warning" />
-          <Input label="Error" />
+          <Input label="Primary" className="fb-min-content" classes={{ theme: 'tc-primary' }} />
+          <Input label="Secondary" className="fb-min-content" classes={{ theme: 'tc-secondary' }} />
+          <Input label="Accent" className="fb-min-content" classes={{ theme: 'tc-accent' }} />
+          <Input label="Light" className="fb-min-content" classes={{ theme: 'tc-light' }} />
+          <Input label="Dark" className="fb-min-content" classes={{ theme: 'tc-dark' }} />
+          <Input label="Info" className="fb-min-content" classes={{ theme: 'tc-info ' }} validators={[maxLength(1)]} />
+          <Input label="Warning" className="fb-min-content" classes={{ theme: 'tc-warning' }} />
+          <Input label="Error" className="fb-min-content" classes={{ theme: 'tc-error' }} />
         </div>
         <div className="flex-sm-c2r fg-4">
           <Input label="Primary Reverse" classes={{ theme: 'tcr-primary' }} />

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useRef, useContext } from 'react';
+import { omit } from 'lodash';
 
 import { notNil, cco } from '../../libraries/fns';
 import { cascadeOrElse } from '../../libraries/cascade';
@@ -25,6 +26,7 @@ interface InputProps<T = any> extends React.InputHTMLAttributes<T> {
  */
 const Input: React.SFC<InputProps> = props => {
   const { label, hint, className } = props;
+  const nativeProps = omit(props, ['label', 'classes', 'validators', 'hint', 'invalid', 'className']);
   const validators = props.validators || [];
 
   const themeContext = useContext(ThemeContext);
@@ -53,11 +55,11 @@ const Input: React.SFC<InputProps> = props => {
         size={1}
         onChange={handleValidation}
         {...focusProps}
-        {...props}
+        {...nativeProps}
       />
       <label className="form-input-label fd-row jc-space-between rt-1 ma-0 px-4 py-2" onClick={onLabelClick}>
-        <span className="fs-0-0 fb-min-content">{label}</span>
-        <span className="fs-0-0 fb-min-content">{message}</span>
+        <span>{label}</span>
+        <span>{message}</span>
       </label>
     </section>
   );
