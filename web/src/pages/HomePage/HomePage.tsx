@@ -1,11 +1,11 @@
 import * as React from 'react'; // This is needed to render jsx with inferno
 import { useState } from 'react';
 
-import './Home.css';
+import './HomePage.css';
 import { Schotter } from '../../components/Schotter';
 import { InputEvent } from '../../libraries/react-types';
 
-export interface HomeProps {
+export interface HomePageProps {
   title: string;
 }
 
@@ -24,27 +24,20 @@ export const useRange = (initialValue: number) => {
 
 /**
  * @render react
- * @name Home
+ * @name HomePage
  * @example
- * <Home text="Hello World" />
+ * <HomePage text="Hello World" />
  */
-export const Home: React.SFC<HomeProps> = () => {
-  const [schotter, setSchotter] = useState(true);
+export const HomePage: React.SFC<HomePageProps> = () => {
   const schotterProps = {
     columns: 12,
-    rows: 22,
-    gap: 1,
-    schotter,
+    rows: 12,
+    gap: 0,
+    schotter: true,
   };
-  const toggleSchotter = () => setSchotter(s => !s);
 
   return (
-    <section className="page-home pa-7 ma-7">
-      <header className="home-header fd-column fg-4 pa-7 ma-7">
-        <button className={schotter ? 'thm-secondary' : 'thm-primary'} onClick={toggleSchotter}>
-          Schotter
-        </button>
-      </header>
+    <section className="page-home">
       <Schotter {...schotterProps} />
     </section>
   );

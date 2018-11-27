@@ -12,7 +12,7 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "lib": ["es5", "es6", "dom"],
-    "types": ["node"],
+    "types": ["node", "jest"],
     "jsx": "react"
   }
 }

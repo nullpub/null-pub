@@ -1,0 +1,30 @@
+.form-input {
+}
+
+.form-input-label {
+  font-size: var(--font-size-down-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-input-input,
+.form-input-label {
+  transition: var(--transition-1);
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+.form-input-input:focus,
+.form-input-input:focus + .form-input-label {
+  outline: none;
+}
+
+.form-input-hint {
+  font-size: var(--font-size-down-5);
+}
+
+.form-input-error {
+  font-size: var(--font-size-down-5);
+}

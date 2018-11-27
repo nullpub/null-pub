@@ -1,11 +1,11 @@
-.grid {
+.schotter-grid {
   display: grid;
   place-items: start;
 }
-.grid > * {
+.schotter-grid > * {
   width: 100%;
 }
-.grid > *::before {
+.schotter-grid > *::before {
   content: '';
   display: inline-block;
   width: 1px;

@@ -1,12 +1,29 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import { Location } from 'history';
+import { find } from 'lodash';
 
-import { Home } from './pages/Home';
+import { history } from './libraries/history';
 
-const App: React.SFC = () => {
-  return <Home title="null.pub" />;
-};
+import { HomePage } from './pages/HomePage';
+import { TestPage } from './pages/TestPage';
+import { ErrorPage } from './pages/ErrorPage';
 
 const container = document.getElementById('app');
 
-render(<App />, container);
+const routes = [
+  { path: '/', action: () => <HomePage title="null.pub" /> },
+  { path: '/test', action: () => <TestPage /> },
+];
+
+const r = (l: Location<any>) => {
+  const page = find(routes, r => r.path === l.pathname);
+
+  if (page !== undefined) {
+    return render(page.action(), container);
+  }
+  return render(<ErrorPage />, container);
+};
+
+r(history.location); // render the current URL
+history.listen(r);
