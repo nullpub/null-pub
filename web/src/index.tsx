@@ -6,7 +6,7 @@ import { find } from 'lodash';
 import { history } from './libraries/history';
 
 import { HomePage } from './pages/HomePage';
-import { TestPage } from './pages/TestPage';
+import TestPage from './pages/TestPage';
 import { ErrorPage } from './pages/ErrorPage';
 
 const container = document.getElementById('app');

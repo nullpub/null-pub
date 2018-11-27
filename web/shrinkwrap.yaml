@@ -1,13 +1,14 @@
 dependencies:
-  '@nll/css': 3.0.0
+  '@nll/css': 3.3.1
   '@nll/rx-fsa': 1.0.5
   history: 4.7.2
   lodash: 4.17.11
   react: 16.7.0-alpha.2
   react-dom: 16.7.0-alpha.2
+  react-icons: 3.2.2
   redux: 4.0.1
 devDependencies:
-  '@nll/schematics-react': 0.1.1
+  '@nll/schematics-react': 0.1.2
   '@types/history': 4.7.2
   '@types/jest': 23.3.9
   '@types/lodash': 4.14.118
@@ -21,7 +22,7 @@ devDependencies:
   react-test-renderer: 16.6.3
   typescript: 3.1.6
 packages:
-  /@angular-devkit/core/0.8.7:
+  /@angular-devkit/core/0.8.8:
     dependencies:
       ajv: 6.4.0
       chokidar: 2.0.4
@@ -32,12 +33,12 @@ packages:
       node: '>= 8.9.0'
       npm: '>= 5.5.1'
     resolution:
-      integrity: sha512-r9w+ppbUdBQlZLfLsU+lqg3VPxKoSbF9Aic0K6hC53VxI/lN5GpRkdIcDWfAYGlsj9GGgk/JAX6Q22LskSfGYg==
-  /@angular-devkit/schematics-cli/0.8.7:
+      integrity: sha512-FDt+ZrKT/pAR74YnbZJQ5Nza+1b5PxGjgvbUtyX63VNxgETTjPa7Oe9Hc6jqW0CekTxHzAFJn79VPRUwKQIocg==
+  /@angular-devkit/schematics-cli/0.8.8:
     dependencies:
-      '@angular-devkit/core': 0.8.7
-      '@angular-devkit/schematics': 0.8.7
-      '@schematics/schematics': 0.8.7
+      '@angular-devkit/core': 0.8.8
+      '@angular-devkit/schematics': 0.8.8
+      '@schematics/schematics': 0.8.8
       minimist: 1.2.0
       rxjs: 6.2.2
       symbol-observable: 1.2.0
@@ -47,17 +48,17 @@ packages:
       npm: '>= 5.5.1'
     hasBin: true
     resolution:
-      integrity: sha512-919URANc3KYOYDBGWF3iGkKqgHL/WcN7e9boJBThz/o8j8qWGEEsSbZ8LIHsP02wxrYKXNPgsykCFRqiFN3LlQ==
-  /@angular-devkit/schematics/0.8.7:
+      integrity: sha512-ntJ3BIUC4XFgy57Y2QyzVbtpTabem1pyqfNQ59q2pm7uHdpYgEV9r0WLGgxjFF9fI95u7HvDvRrs3PIXvJUrOA==
+  /@angular-devkit/schematics/0.8.8:
     dependencies:
-      '@angular-devkit/core': 0.8.7
+      '@angular-devkit/core': 0.8.8
       rxjs: 6.2.2
     dev: true
     engines:
       node: '>= 8.9.0'
       npm: '>= 5.5.1'
     resolution:
-      integrity: sha512-Xu49OH0tpfqKLMdLy0ghbMwsYVHLlnjsKm8JQKkDah9oYMnj94ZoqESi1xVorYVHHJ1Jbi9Xm3ZY3QGF+x0j7g==
+      integrity: sha512-MXdjdG9KENur1Pu9etAfO5rbO0T5bk5tFWlCxdPr34a/EDy1rkz5taReTSV1Fc5ERWx3Brubws0EB2NrgPkRcw==
   /@babel/code-frame/7.0.0:
     dependencies:
       '@babel/highlight': 7.0.0
@@ -796,42 +797,42 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g==
-  /@nll/css/3.0.0:
+  /@nll/css/3.3.1:
     dev: false
     resolution:
-      integrity: sha512-SwC/mtjhfpU4cRiHk2gefIqXfFlI4cnsQ9FCV14gDwPuHCckuoWotGglB70pwMuJZK39fa+Mhq0hnqwyRevEDQ==
+      integrity: sha512-egExsHbNbqcHo5+6J46DEGzrzwmTfaJErOVnG+QIrsGE8Z5ilaYyfJb+WOfIWW62s7+F3/NRPZzvSxuAHHyQjA==
   /@nll/rx-fsa/1.0.5:
     dev: false
     peerDependencies:
       rxjs: ^6.2.2
     resolution:
       integrity: sha512-+naLgfqKKv0iEHBZ/weT/UxQYnsRTEEi918EBBnXcb5iyKDjAtA24hsPm+ikdaa/X9IU4ODoLVLXeBKdTSnQMg==
-  /@nll/schematics-react/0.1.1:
+  /@nll/schematics-react/0.1.2:
     dependencies:
-      '@angular-devkit/core': 0.8.7
-      '@angular-devkit/schematics': 0.8.7
-      '@angular-devkit/schematics-cli': 0.8.7
+      '@angular-devkit/core': 0.8.8
+      '@angular-devkit/schematics': 0.8.8
+      '@angular-devkit/schematics-cli': 0.8.8
       '@types/node': 8.10.38
       typescript: 2.9.2
     dev: true
     resolution:
-      integrity: sha512-yTFP4pgOZNfRE/XlUJCMcSkVb3Lqu/t0S3zraWAUqtwhr761M0/4+zKX1QE2ztVdtn5xOVxKO6qKG5bVZqE4Ng==
+      integrity: sha512-L0oIrEvqShPjug+8gnOzjxE/JldWuiTInI8wS9NBkidkBLMjG1lQr+Dx87uGclJqwx76L4tOnBNy2feaDjDy3A==
   /@nodelib/fs.stat/1.1.3:
     dev: true
     engines:
       node: '>= 6'
     resolution:
       integrity: sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
-  /@schematics/schematics/0.8.7:
+  /@schematics/schematics/0.8.8:
     dependencies:
-      '@angular-devkit/core': 0.8.7
-      '@angular-devkit/schematics': 0.8.7
+      '@angular-devkit/core': 0.8.8
+      '@angular-devkit/schematics': 0.8.8
     dev: true
     engines:
       node: '>= 8.9.0'
       npm: '>= 5.5.1'
     resolution:
-      integrity: sha512-Ebz846usbL0ZblnvKwtpK6hYV9w/SjC/OoYV0Nay36xxC9SWs9eqp5GmCDke6Yce5Hzo/l1+Ggas9SiWtFKVKg==
+      integrity: sha512-h+qImdiRzrHkJ8uj2/S+ZQGBu5T7qWwLLBhdTaV1e9r4SvDuzuzoN7NnQtOWabpF5SFNdrh9sAdCSo/0CnNzXw==
   /@types/history/4.7.2:
     dev: true
     resolution:
@@ -5785,6 +5786,10 @@ packages:
       react: ^16.0.0 || 16.7.0-alpha.2
     resolution:
       integrity: sha512-o0mMw8jBlwHjGZEy/vvKd/6giAX0+skREMOTs3/QHmgi+yAhUClp4My4Z9lsKy3SXV+03uPdm1l/QM7NTcGuMw==
+  /react-icons/3.2.2:
+    dev: false
+    resolution:
+      integrity: sha512-0DiXTcECUNoMvze2zcFwYYrHAFgQ2rBM0+HIHfaECKRfE1NZYwfuUSbwyg9s1uVPuy7o/KqQKSwBGMWQFvdrhQ==
   /react-is/16.6.3:
     dev: true
     resolution:
@@ -7194,9 +7199,9 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@nll/css': ^3.0.0
+  '@nll/css': ^3.3.1
   '@nll/rx-fsa': ^1.0.5
-  '@nll/schematics-react': 0.1.1
+  '@nll/schematics-react': 0.1.2
   '@types/history': ^4.7.2
   '@types/jest': ^23.3.9
   '@types/lodash': ^4.14.118
@@ -7211,6 +7216,7 @@ specifiers:
   parcel-plugin-bundle-visualiser: ^1.2.0
   react: 16.7.0-alpha.2
   react-dom: 16.7.0-alpha.2
+  react-icons: ^3.2.2
   react-test-renderer: ^16.6.3
   redux: ^4.0.1
   typescript: ^3.1.6

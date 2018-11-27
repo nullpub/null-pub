@@ -42,3 +42,5 @@ export const HomePage: React.SFC<HomePageProps> = () => {
     </section>
   );
 };
+
+export default HomePage;

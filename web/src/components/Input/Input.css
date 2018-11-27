@@ -6,6 +6,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: text;
 }
 
 .form-input-input,
@@ -17,7 +18,16 @@
 }
 
 .form-input-input:focus,
-.form-input-input:focus + .form-input-label {
+.form-input-label:focus {
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+.form-input-input {
+}
+
+.form-input-input:focus {
   outline: none;
 }
 

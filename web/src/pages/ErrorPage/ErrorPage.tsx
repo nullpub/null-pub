@@ -15,3 +15,5 @@ export const ErrorPage: React.SFC<ErrorPageProps> = () => (
     <h1 className="thm-error">Error</h1>
   </article>
 );
+
+export default ErrorPage;

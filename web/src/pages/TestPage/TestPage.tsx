@@ -1,11 +1,10 @@
 import * as React from 'react';
 
-import { Input } from '../../components/Forms';
+import Input from '../../components/Input';
 
 import './TestPage.css';
-import { eventValueFactory } from '../../libraries/eventValue';
 
-export interface TestPageProps {}
+interface TestPageProps {}
 
 /**
  * @render react
@@ -13,22 +12,43 @@ export interface TestPageProps {}
  * @example
  * <TestPage label="Hello World" />
  */
-export const TestPage: React.SFC<TestPageProps> = () => {
-  const onChange = eventValueFactory(v => console.log('Hello', v));
+const TestPage: React.SFC<TestPageProps> = () => {
+  const maxLength = (n: number, m: string = 'Too Long!') => (v: string) => (v.length > n ? m : undefined);
+
   return (
-    <article className="page-test fd-column fg-4">
-      <section className="page-test-form flex-sm-c2r fg-4">
-        <Input label="Email" type="email" onChange={onChange} />
-        <Input className="tcr-info" label="Password" type="password" onChange={onChange} />
-      </section>
-      <section className="page-test-form flex-sm-c2r fg-4">
-        <Input className="tc-warning" label="Email" type="email" onChange={onChange} hint="Some Error!" />
-        <Input className="tc-info" label="Password" type="password" onChange={onChange} />
-      </section>
-      <section className="page-test-form flex-sm-c2r fg-4">
-        <Input className="tc-primary" label="Email" type="email" onChange={onChange} />
-        <Input className="tcr-primary" label="Password" type="password" onChange={onChange} />
-      </section>
+    <article className="page-test">
+      <div className="fd-column fg-4 pa-4">
+        <div className="flex-sm-c2r fg-4">
+          <Input label="Primary" />
+          <Input label="Secondary" />
+          <Input label="Accent" />
+          <Input label="Light" />
+          <Input label="Dark" />
+          <Input label="Info" classes={{ theme: 'tc-info ' }} validators={[maxLength(1)]} />
+          <Input label="Warning" />
+          <Input label="Error" />
+        </div>
+        <div className="flex-sm-c2r fg-4">
+          <Input label="Primary Reverse" classes={{ theme: 'tcr-primary' }} />
+          <Input label="Secondary Reverse" classes={{ theme: 'tcr-secondary' }} />
+          <Input label="Accent Reverse" classes={{ theme: 'tcr-accent' }} />
+          <Input label="Light Reverse" classes={{ theme: 'tcr-light' }} />
+          <Input label="Dark Reverse" classes={{ theme: 'tcr-dark' }} />
+          <Input label="Info Reverse" classes={{ theme: 'tcr-info ' }} />
+          <Input label="Warning Reverse" classes={{ theme: 'tcr-warning' }} />
+          <Input label="Error Reverse" classes={{ theme: 'tcr-error' }} />
+        </div>
+        <div className="flex-md-c2r fg-4">
+          <Input label="Email" />
+          <Input label="Password" />
+        </div>
+        <div className="flex-lg-c2r fg-4">
+          <Input label="Email" />
+          <Input label="Password" />
+        </div>
+      </div>
     </article>
   );
 };
+
+export default TestPage;

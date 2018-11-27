@@ -1,1 +1,0 @@
-.page-home{width:100vw;height:100vh;display:grid;align-items:center;justify-content:center}.page-home article{max-width:80vh;max-height:80vh;width:80vw}.grid{display:grid;place-items:start}.grid>*{width:100%}.grid>:before{content:"";display:inline-block;width:1px;height:0;padding-bottom:100%}
