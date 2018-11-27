@@ -4,3 +4,9 @@
   display: grid;
   align-items: center;
 }
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: var(--margin-size-4);
+}
