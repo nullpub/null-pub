@@ -1,3 +1,3 @@
 import * as React from 'react';
 
-export type InputEvent = React.SyntheticEvent<HTMLInputElement>;
+export type InputEvent<T> = React.SyntheticEvent<T>;

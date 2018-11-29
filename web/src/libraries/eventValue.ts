@@ -1,11 +1,13 @@
-import { InputEvent } from './react-types';
+import { SyntheticEvent } from 'react';
 
-export const getEventValue = <T = string>(e: InputEvent) => {
-  const value: unknown = e.currentTarget.value;
-  return value as T;
+export const getEventValue = <U, T extends { value: U } = { value: U }>(e: SyntheticEvent<T>) => {
+  const value = e.currentTarget.value;
+  return value;
 };
 
-export const eventValueFactory = <T>(fn: (v: T) => void) => (e: InputEvent) => {
-  const value = getEventValue<T>(e);
+export const eventValueFactory = <U, T extends { value: U } = { value: U }>(fn: (v: U) => void) => (
+  e: SyntheticEvent<T>
+) => {
+  const value = getEventValue<U, T>(e);
   fn(value);
 };

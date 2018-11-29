@@ -1,12 +1,25 @@
 .page-test {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: grid;
   align-items: center;
 }
 
 .test-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: var(--margin-size-4);
+}
+
+.gs-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .test-grid {
+    grid-template-columns: 1fr;
+  }
+  .gs-2 {
+    grid-column: span 1;
+  }
 }

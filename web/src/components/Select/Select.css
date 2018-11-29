@@ -1,46 +1,46 @@
-.form-input {
+.form-select {
 }
 
-.form-input-label {
-  cursor: text;
+.form-select-label {
 }
 
-.form-input-label > span {
+.form-select-label > span {
   font-size: var(--font-size-down-3);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.form-input-label-message {
+.form-select-label-message {
 }
 
-.form-input-input,
-.form-input-label {
-  transition: var(--transition-tc);
+.form-select-select,
+.form-select-label {
+  transition: var(--transition-1);
   color: inherit;
   background-color: inherit;
   border-color: inherit;
 }
 
-.form-input-input:focus,
-.form-input-label:focus {
+.form-select-select:focus,
+.form-select-label:focus {
   color: inherit;
   background-color: inherit;
   border-color: inherit;
 }
 
-.form-input-input {
+.form-select-select {
+  width: 100%;
 }
 
-.form-input-input:focus {
+.form-select-select:focus {
   outline: none;
 }
 
-.form-input-hint {
+.form-select-hint {
   font-size: var(--font-size-down-5);
 }
 
-.form-input-error {
+.form-select-error {
   font-size: var(--font-size-down-5);
 }
