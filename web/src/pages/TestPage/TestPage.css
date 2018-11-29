@@ -7,19 +7,19 @@
 
 .test-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: var(--margin-size-4);
 }
-
 .gs-2 {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 728px) {
   .test-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
+
   .gs-2 {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 }

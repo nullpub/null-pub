@@ -1,7 +1,7 @@
 @import './vendor/nll-css';
 
 :root {
-  --breakpoint-sm: 768px;
+  --breakpoint-sm: 320px;
   --breakpoint-md: 992px;
   --breakpoint-lg: 1200px;
 }
@@ -16,7 +16,7 @@ body {
 }
 
 /* Small to Medium */
-@media (min-width: 768px) {
+@media (min-width: 320px) {
   :root {
     --size-base: 1px;
   }
