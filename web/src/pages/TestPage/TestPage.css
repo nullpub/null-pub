@@ -14,7 +14,7 @@
   grid-column: span 1;
 }
 
-@media (min-width: 728px) {
+@media (min-width: 50em) {
   .test-grid {
     grid-template-columns: repeat(4, 1fr);
   }
