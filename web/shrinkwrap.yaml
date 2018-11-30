@@ -1,5 +1,5 @@
 dependencies:
-  '@nll/css': 3.5.0
+  '@nll/css': 4.0.0
   '@nll/rx-fsa': 1.0.5
   history: 4.7.2
   lodash: 4.17.11
@@ -798,10 +798,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g==
-  /@nll/css/3.5.0:
+  /@nll/css/4.0.0:
     dev: false
     resolution:
-      integrity: sha512-jkEufdDVXJdg42zX1/mtjzNceMVeftyJwOa3r3ZEFlvZZJf9/jSKtMkNFh3q3Q4GOgfimQKurQILo4nNpPn4QQ==
+      integrity: sha512-XH5hUIGeaa7IdLX+d8pyAH5PdxmVhirq+x9kSmgXkKaatQ2/Fp2NdiVGkwvMfGYIju5Q0IKAg0DZM5tJEn8HaQ==
   /@nll/rx-fsa/1.0.5:
     dev: false
     peerDependencies:
@@ -7290,7 +7290,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@nll/css': ^3.5.0
+  '@nll/css': ^4.0.0
   '@nll/rx-fsa': ^1.0.5
   '@nll/schematics-react': 0.1.2
   '@types/history': ^4.7.2

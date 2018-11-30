@@ -4,6 +4,7 @@ export interface InputClasses {
   theme: string;
   focused: string;
   invalid: string;
+  disabled: string;
 }
 
 export interface ThemeContext {
@@ -15,9 +16,10 @@ export interface ThemeContext {
  */
 const defaultThemeContext: ThemeContext = {
   inputClasses: {
-    theme: 'tc-light',
-    focused: 'tc-accent',
-    invalid: 'tc-warning',
+    theme: 'ct-light',
+    focused: 'ct-accent',
+    invalid: 'ct-warning',
+    disabled: 'ct-dark',
   },
 };
 

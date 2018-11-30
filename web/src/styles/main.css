@@ -6,26 +6,26 @@ body {
 }
 
 :root {
-  --size: 1.2rem;
+  --size: 22px;
 }
 
 /* Small and Up */
 @media (min-width: 50em) {
   :root {
-    --size: 1rem;
+    --size: 20px;
   }
 }
 
 /* Medium and Up */
 @media (min-width: 70em) {
   :root {
-    --size: 1rem;
+    --size: 20px;
   }
 }
 
 /* Large and Up */
 @media (min-width: 90em) {
   :root {
-    --size: 1rem;
+    --size: 20px;
   }
 }

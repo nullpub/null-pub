@@ -10,12 +10,12 @@ export interface HomePageProps {
 }
 
 // Helper functions
-const getValue = (e: InputEvent) => e.currentTarget.value;
+const getValue = (e: InputEvent<any>) => e.currentTarget.value;
 
 export const useRange = (initialValue: number) => {
   const type = 'range';
   const [value, setState] = useState(initialValue);
-  const onChange = (e: InputEvent) => {
+  const onChange = (e: InputEvent<any>) => {
     const next = parseInt(getValue(e));
     setState(next);
   };

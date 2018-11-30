@@ -46,7 +46,7 @@ const Input: React.SFC<InputProps> = props => {
   // Set Theme - Focus > Invalid > Default
   const [focused, focusProps] = useFocus();
   const theme = cascadeOrElse(classes.theme, [focused, classes.focused], [notNil(invalid), classes.invalid]);
-  const mergedClassName = `form-input fs-1-1 fd-column-reverse rt-1 ba-0 bb-2 ${theme} ${className}`;
+  const mergedClassName = `form-input fls-1-1 fld-column-reverse brt-1 ba-0 bb-2 ${theme} ${className}`;
 
   // Set Message - Invalid > Hint
   const message = cco('\u00A0')(invalid, hint);
@@ -54,14 +54,17 @@ const Input: React.SFC<InputProps> = props => {
   return (
     <section className={mergedClassName}>
       <input
-        className="form-input-input ba-0 pa-0 px-4 pb-3"
+        className="form-input-input ba-0 bra-0 pa-0 px-4 pb-3"
         ref={inputRef}
         size={1}
         onChange={handleValidation}
         {...focusProps}
         {...nativeProps}
       />
-      <label className="form-input-label fd-row jc-space-between fg-3 rt-1 px-4 pt-2 ma-0" onClick={onLabelClick}>
+      <label
+        className="form-input-label fld-row jc-space-between flg-3 brt-1 fsd-3 px-4 pt-2 ma-0"
+        onClick={onLabelClick}
+      >
         <span className="form-input-label-label">{label}</span>
         <span className="form-input-label-message">{message}</span>
       </label>

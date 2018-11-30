@@ -54,7 +54,7 @@ export const Select: React.SFC<SelectProps> = props => {
   // Set Theme - Focus > Invalid > Default
   const [focused, focusProps] = useFocus();
   const theme = cascadeOrElse(classes.theme, [focused, classes.focused], [notNil(invalid), classes.invalid]);
-  const mergedClassName = `form-select fs-1-1 fd-column-reverse rt-1 ba-0 bb-2 ${theme} ${className}`;
+  const mergedClassName = `form-select fsg-1-1 fd-column-reverse rt-1 ba-0 bb-2 ${theme} ${className}`;
 
   // Set Message - Invalid > Hint
   const message = cco('\u00A0')(invalid, hint);

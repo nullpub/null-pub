@@ -12,7 +12,7 @@ export interface ErrorPageProps {}
  */
 export const ErrorPage: React.SFC<ErrorPageProps> = () => (
   <article className="page-error">
-    <h1 className="thm-error">Error</h1>
+    <h1 className="ct-error">Error</h1>
   </article>
 );
 

@@ -6,7 +6,6 @@
 }
 
 .form-input-label > span {
-  font-size: var(--font-size-down-3);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -38,9 +37,7 @@
 }
 
 .form-input-hint {
-  font-size: var(--font-size-down-5);
 }
 
 .form-input-error {
-  font-size: var(--font-size-down-5);
 }

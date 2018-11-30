@@ -51,25 +51,31 @@ const TestPage: React.SFC<TestPageProps> = () => {
 
   return (
     <article className="page-test">
+      <h1 className="fsu-5 ma-0 pa-0 pl-5">Header 1</h1>
+      <h2 className="fsu-4 ma-0 pa-0 pl-5">Header 2</h2>
+      <h3 className="fsu-3 ma-0 pa-0 pl-5">Header 3</h3>
+      <h4 className="fsu-2 ma-0 pa-0 pl-5">Header 4</h4>
+      <h5 className="fsu-1 ma-0 pa-0 pl-5">Header 5</h5>
+      <h6 className="fsu-0 ma-0 pa-0 pl-5">Header 6</h6>
       <section className="test-grid pa-4">
-        <Input label="Base" className="gs-2" classes={{ theme: 'tc-base' }} {...shared} />
-        <Input label="Base Reverse" className="gs-2" classes={{ theme: 'tcr-base' }} {...shared} />
-        <Input label="Primary" classes={{ theme: 'tc-primary' }} {...shared} />
-        <Input label="Secondary" classes={{ theme: 'tc-secondary' }} {...shared} />
-        <Input label="Accent" classes={{ theme: 'tc-accent', focused: 'tcr-accent' }} {...shared} />
-        <Input label="Light" classes={{ theme: 'tc-light' }} {...shared} />
-        <Input label="Dark" classes={{ theme: 'tc-dark' }} {...shared} />
-        <Input label="Info" classes={{ theme: 'tc-info ' }} {...shared} />
-        <Input label="Warning" classes={{ theme: 'tc-warning' }} {...shared} />
-        <Input label="Error" classes={{ theme: 'tc-error' }} {...shared} />
-        <Input label="Primary Reverse" classes={{ theme: 'tcr-primary' }} {...shared} />
-        <Input label="Secondary Reverse" classes={{ theme: 'tcr-secondary' }} {...shared} />
-        <Input label="Accent Reverse" classes={{ theme: 'tcr-accent' }} {...shared} />
-        <Input label="Light Reverse" classes={{ theme: 'tcr-light' }} {...shared} />
-        <Input label="Dark Reverse" classes={{ theme: 'tcr-dark' }} {...shared} />
-        <Input label="Info Reverse" classes={{ theme: 'tcr-info ' }} {...shared} />
-        <Input label="Warning Reverse" classes={{ theme: 'tcr-warning' }} {...shared} />
-        <Input label="Error Reverse" classes={{ theme: 'tcr-error' }} {...shared} />
+        <Input label="Base" className="gs-2" classes={{ theme: 'ct-base' }} {...shared} />
+        <Input label="Base Reverse" className="gs-2" classes={{ theme: 'ctr-base' }} {...shared} />
+        <Input label="Primary" classes={{ theme: 'ct-primary' }} {...shared} />
+        <Input label="Secondary" classes={{ theme: 'ct-secondary' }} {...shared} />
+        <Input label="Accent" classes={{ theme: 'ct-accent', focused: 'ctr-accent' }} {...shared} />
+        <Input label="Light" classes={{ theme: 'ct-light' }} {...shared} />
+        <Input label="Dark" classes={{ theme: 'ct-dark' }} {...shared} />
+        <Input label="Info" classes={{ theme: 'ct-info ' }} {...shared} />
+        <Input label="Warning" classes={{ theme: 'ct-warning' }} {...shared} />
+        <Input label="Error" classes={{ theme: 'ct-error' }} {...shared} />
+        <Input label="Primary Reverse" classes={{ theme: 'ctr-primary' }} {...shared} />
+        <Input label="Secondary Reverse" classes={{ theme: 'ctr-secondary' }} {...shared} />
+        <Input label="Accent Reverse" classes={{ theme: 'ctr-accent' }} {...shared} />
+        <Input label="Light Reverse" classes={{ theme: 'ctr-light' }} {...shared} />
+        <Input label="Dark Reverse" classes={{ theme: 'ctr-dark' }} {...shared} />
+        <Input label="Info Reverse" classes={{ theme: 'ctr-info ' }} {...shared} />
+        <Input label="Warning Reverse" classes={{ theme: 'ctr-warning' }} {...shared} />
+        <Input label="Error Reverse" classes={{ theme: 'ctr-error' }} {...shared} />
       </section>
     </article>
   );
