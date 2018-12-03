@@ -3,6 +3,12 @@
 /* Base Sizing */
 body {
   font-size: var(--font-size);
+  font-family: 'Merriweather', serif;
+  text-rendering: optimizeLegibility;
+}
+
+.ff-secondary {
+  font-family: 'Permanent Marker', cursive;
 }
 
 :root {
@@ -11,21 +17,21 @@ body {
 
 /* Small and Up */
 @media (min-width: 50em) {
-  :root {
+  /* :root {
     --size: 20px;
-  }
+  } */
 }
 
 /* Medium and Up */
 @media (min-width: 70em) {
-  :root {
+  /* :root {
     --size: 20px;
-  }
+  } */
 }
 
 /* Large and Up */
 @media (min-width: 90em) {
-  :root {
+  /* :root {
     --size: 20px;
-  }
+  } */
 }

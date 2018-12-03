@@ -21,13 +21,30 @@ const Example = () => (
   </Manager>
 );
 
-import { nil } from '../../libraries/fns';
+import { nil, notNil } from '../../libraries/fns';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
 import './TestPage.css';
+import { cascadeOrElse } from '../../libraries/cascade';
 
 interface TestPageProps {}
+
+const passwordCompare = (message: string = 'Passwords Must Match') => {
+  let currentPassword: string | undefined = undefined;
+  const password = (v: string) => {
+    currentPassword = v;
+    return undefined;
+  };
+  const confirmPassword = (v: string) =>
+    cascadeOrElse<string | undefined>(
+      undefined,
+      [nil(v), undefined],
+      [nil(currentPassword), undefined],
+      [v !== currentPassword, message]
+    );
+  return [password, confirmPassword];
+};
 
 /**
  * @render react
@@ -37,7 +54,8 @@ interface TestPageProps {}
  */
 const TestPage: React.SFC<TestPageProps> = () => {
   const maxLength = (n: number, m: string = 'Too Long!') => (v: string) => (v.length > n ? m : undefined);
-  // const minLength = (n: number, m: string = 'Too Short!') => (v: string) => (v.length < n ? m : undefined);
+  const [password, confirmPassword] = passwordCompare();
+
   const shared = {
     validators: [maxLength(7)],
     handleInvalid: (v?: string) => console.log(nil(v) ? 'Goot' : `Bat : ${v}`),
@@ -51,15 +69,25 @@ const TestPage: React.SFC<TestPageProps> = () => {
 
   return (
     <article className="page-test">
-      <h1 className="fsu-5 ma-0 pa-0 pl-5">Header 1</h1>
-      <h2 className="fsu-4 ma-0 pa-0 pl-5">Header 2</h2>
-      <h3 className="fsu-3 ma-0 pa-0 pl-5">Header 3</h3>
-      <h4 className="fsu-2 ma-0 pa-0 pl-5">Header 4</h4>
-      <h5 className="fsu-1 ma-0 pa-0 pl-5">Header 5</h5>
-      <h6 className="fsu-0 ma-0 pa-0 pl-5">Header 6</h6>
+      <header className="page-test-header">
+        <h1 className="ma-0 pa-0 pl-5 cfr-primary">Header 1</h1>
+        <p className="ma-0 pa-0 pl-5 cfr-secondary">This is a subtitle</p>
+      </header>
       <section className="test-grid pa-4">
-        <Input label="Base" className="gs-2" classes={{ theme: 'ct-base' }} {...shared} />
-        <Input label="Base Reverse" className="gs-2" classes={{ theme: 'ctr-base' }} {...shared} />
+        <Input
+          label="Password"
+          className="gs-2"
+          type="password"
+          classes={{ theme: 'ct-base' }}
+          validators={[password]}
+        />
+        <Input
+          label="Confirm Password"
+          className="gs-2"
+          type="password"
+          classes={{ theme: 'ctr-base' }}
+          validators={[confirmPassword]}
+        />
         <Input label="Primary" classes={{ theme: 'ct-primary' }} {...shared} />
         <Input label="Secondary" classes={{ theme: 'ct-secondary' }} {...shared} />
         <Input label="Accent" classes={{ theme: 'ct-accent', focused: 'ctr-accent' }} {...shared} />
