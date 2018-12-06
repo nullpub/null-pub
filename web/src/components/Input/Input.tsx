@@ -26,8 +26,7 @@ interface InputProps<T = any> extends React.InputHTMLAttributes<T> {
  * <Input />
  */
 const Input: React.SFC<InputProps> = props => {
-  const { start, end, measure } = useTiming('input');
-  start();
+  useTiming('input');
 
   const { label, hint, className, handleInvalid } = props;
   const nativeProps = omit(props, ['label', 'classes', 'validators', 'hint', 'handleInvalid', 'className']);
@@ -54,8 +53,6 @@ const Input: React.SFC<InputProps> = props => {
 
   // Set Message - Invalid > Hint
   const message = cco('\u00A0')(invalid, hint);
-  end();
-  measure();
 
   return (
     <section className={mergedClassName}>

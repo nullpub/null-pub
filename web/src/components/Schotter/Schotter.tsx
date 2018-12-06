@@ -21,16 +21,13 @@ export interface SchotterProps {
  * <Schotter rows=22 columns=12 gap=0 />
  */
 export const Schotter: React.SFC<SchotterProps> = ({ rows, columns, gap }) => {
-  const { start, end, measure } = useTiming('schotter');
-  start();
+  useTiming('schotter');
   const total = columns * rows;
   const style = {
     gridTemplateRows: `repeat(${rows}, 1fr)`,
     gridTemplateColumns: `repeat(${columns}, 1fr)`,
     gridGap: `${gap}px`,
   };
-  end();
-  measure();
 
   return (
     <article style={style} className="schotter-grid">
