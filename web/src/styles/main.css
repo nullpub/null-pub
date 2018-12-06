@@ -13,14 +13,14 @@ body {
 }
 
 /* Fluid Size Scaling */
-@media (min-width: 50em) and (max-width: 90em) {
+@media (min-width: 40em) and (max-width: 75em) {
   :root {
-    --size: calc(1rem + 0.5 * (100vw - 50rem) / (90 - 50));
+    --size: calc(1rem + 0.5 * (100vw - 40rem) / (75 - 40));
   }
 }
 
 /* Large and Up */
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   :root {
     --size: 1.5rem;
   }
