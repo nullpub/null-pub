@@ -9,26 +9,19 @@ body {
 }
 
 :root {
-  --size: 18px;
+  --size: 1rem;
 }
 
-/* Small and Up */
-@media (min-width: 50em) {
+/* Fluid Size Scaling */
+@media (min-width: 50em) and (max-width: 90em) {
   :root {
-    --size: 20px;
+    --size: calc(1rem + 0.5 * (100vw - 50rem) / (90 - 50));
   }
-}
-
-/* Medium and Up */
-@media (min-width: 70em) {
-  /* :root {
-    --size: 20px;
-  } */
 }
 
 /* Large and Up */
 @media (min-width: 90em) {
-  /* :root {
-    --size: 20px;
-  } */
+  :root {
+    --size: 1.5rem;
+  }
 }

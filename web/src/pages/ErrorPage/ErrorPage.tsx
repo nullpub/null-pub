@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { history } from '../../libraries/history';
+
 import './ErrorPage.css';
 
 export interface ErrorPageProps {}
@@ -12,7 +14,9 @@ export interface ErrorPageProps {}
  */
 export const ErrorPage: React.SFC<ErrorPageProps> = () => (
   <article className="page-error">
-    <h1 className="ct-error">Error</h1>
+    <h1 className="ct-error ctr-error-hover ba-1 px-5 py-3 mtm-25p" onClick={() => history.push('/')}>
+      Error
+    </h1>
   </article>
 );
 
