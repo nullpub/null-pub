@@ -4,6 +4,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  animation: fadein 2s;
 }
 
 /* Schotter wraps the main block in an article tag */
@@ -11,4 +12,13 @@
   max-width: 80vh;
   max-height: 80vh;
   width: 80vw;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
