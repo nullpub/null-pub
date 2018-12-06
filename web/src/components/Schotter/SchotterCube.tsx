@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useMemo } from 'react';
+import { useState } from 'react';
 
 import { randomIntInRange, randomInRange } from '../../libraries/random';
 
@@ -24,10 +24,14 @@ const computeTransforms = (drift: number, range: number) => {
  * <SchotterCube index={0} total={1} />
  */
 export const SchotterCube: React.SFC<SchotterCubeProps> = ({ index, total }) => {
-  const { tx, ty, tr } = useMemo(() => computeTransforms(index / total, Math.pow(index / total, 3) * 50), [total]);
+  const generateTransforms = () => computeTransforms(index / total, Math.pow(index / total, 2) * 50);
+  const [state, setState] = useState(generateTransforms());
+  const { tx, ty, tr } = state;
   const style = {
     transform: `translate(${tx}%, ${ty}%) rotate(${tr}rad)`,
+    transition: 'transform 1s ease-out',
   };
+  const shift = () => setState(generateTransforms());
 
-  return <section style={style} className={`ba-1 bs-solid schotter-cube`} />;
+  return <section style={style} className={`ba-1 bs-solid schotter-cube`} onMouseOver={shift} />;
 };
