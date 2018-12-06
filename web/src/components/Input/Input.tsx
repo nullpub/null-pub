@@ -7,6 +7,7 @@ import { cascadeOrElse } from '../../libraries/cascade';
 import { useFocus } from '../../libraries/useFocus';
 import { useValidators, Validator } from '../../libraries/useValidators';
 import { InputClasses, ThemeContext } from '../../context/theme';
+import { useTiming } from '../../libraries/useTiming';
 
 import './Input.css';
 
@@ -25,6 +26,9 @@ interface InputProps<T = any> extends React.InputHTMLAttributes<T> {
  * <Input />
  */
 const Input: React.SFC<InputProps> = props => {
+  const { start, end, measure } = useTiming('input');
+  start();
+
   const { label, hint, className, handleInvalid } = props;
   const nativeProps = omit(props, ['label', 'classes', 'validators', 'hint', 'handleInvalid', 'className']);
   const validators = props.validators || [];
@@ -50,6 +54,8 @@ const Input: React.SFC<InputProps> = props => {
 
   // Set Message - Invalid > Hint
   const message = cco('\u00A0')(invalid, hint);
+  end();
+  measure();
 
   return (
     <section className={mergedClassName}>
