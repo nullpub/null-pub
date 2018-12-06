@@ -3,23 +3,20 @@
 /* Base Sizing */
 body {
   font-size: var(--font-size);
-  font-family: 'Merriweather', serif;
+  font-family: 'Lato', sans-serif;
   text-rendering: optimizeLegibility;
-}
-
-.ff-secondary {
-  font-family: 'Permanent Marker', cursive;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
-  --size: 22px;
+  --size: 18px;
 }
 
 /* Small and Up */
 @media (min-width: 50em) {
-  /* :root {
+  :root {
     --size: 20px;
-  } */
+  }
 }
 
 /* Medium and Up */
