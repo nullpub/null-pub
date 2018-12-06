@@ -26,7 +26,7 @@ interface InputProps<T = any> extends React.InputHTMLAttributes<T> {
  * <Input />
  */
 const Input: React.SFC<InputProps> = props => {
-  useTiming('input');
+  useTiming(`RenderInput${props.label}`);
 
   const { label, hint, className, handleInvalid } = props;
   const nativeProps = omit(props, ['label', 'classes', 'validators', 'hint', 'handleInvalid', 'className']);

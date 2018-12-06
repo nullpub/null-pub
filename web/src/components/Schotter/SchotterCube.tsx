@@ -25,7 +25,7 @@ const computeTransforms = (drift: number, range: number) => {
  * <SchotterCube index={0} total={1} />
  */
 export const SchotterCube: React.SFC<SchotterCubeProps> = ({ index, total }) => {
-  useTiming('input');
+  useTiming(`RenderSchotterCube${index}`);
   const generateTransforms = () => computeTransforms(index / total, Math.pow(index / total, 2) * 50);
   const [state, setState] = useState(generateTransforms());
   const { tx, ty, tr } = state;
