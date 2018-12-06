@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * from './polyfills';
 import { render } from 'react-dom';
 import { Location } from 'history';
 import { find } from 'lodash';

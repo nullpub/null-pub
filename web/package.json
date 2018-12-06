@@ -16,6 +16,7 @@
   "dependencies": {
     "@nll/css": "^4.0.3",
     "@nll/rx-fsa": "^1.0.5",
+    "core-js": "^2.6.0",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
     "react": "16.7.0-alpha.2",
