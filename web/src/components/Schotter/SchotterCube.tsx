@@ -30,7 +30,7 @@ export const SchotterCube: React.SFC<SchotterCubeProps> = ({ index, total }) => 
   const [state, setState] = useState(generateTransforms());
   const { tx, ty, tr } = state;
   const style = {
-    transform: `translate(${tx}%, ${ty}%) rotate(${tr}rad)`,
+    transform: `translate3d(${tx}%, ${ty}%, 0) rotate(${tr}rad)`,
     transition: 'transform 1s ease-out',
   };
   const shift = () => setState(generateTransforms());
