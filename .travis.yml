@@ -1,13 +1,8 @@
-branches:
-  only:
-  - master
 language: node_js
-node_js:
- — “7”
-install:
- — npm install -g firebase-tools
+node_js: — “7”
+install: — "npm install -g firebase-tools"
 deploy:
   provider: firebase
   token:
     secure: $FIREBASE_TOKEN
-  project: "null-pub-31337"
+  project: 'null-pub-31337'
