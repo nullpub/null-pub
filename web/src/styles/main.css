@@ -10,19 +10,20 @@ body {
 }
 
 :root {
-  --size: 1rem;
+  --size: 1.2rem;
+  --radius-size: calc(var(--size) / 8);
 }
 
 /* Fluid Size Scaling */
-@media (min-width: 40em) and (max-width: 75em) {
+@media (min-width: 50em) and (max-width: 90em) {
   :root {
-    --size: calc(1rem + 0.5 * (100vw - 40rem) / (75 - 40));
+    --size: calc(1.2rem + 0.2 * (100vw - 50rem) / (90 - 50));
   }
 }
 
 /* Large and Up */
 @media (min-width: 75em) {
   :root {
-    --size: 1.5rem;
+    --size: 1.4rem;
   }
 }
