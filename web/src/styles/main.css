@@ -1,29 +1,5 @@
 @import './vendor/nll-css';
 
-/* Base Sizing */
 body {
-  font-size: var(--font-size);
   font-family: 'Lato', sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  overscroll-behavior: none;
-}
-
-:root {
-  --size: 1.2rem;
-  --radius-size: calc(var(--size) / 8);
-}
-
-/* Fluid Size Scaling */
-@media (min-width: 50em) and (max-width: 90em) {
-  :root {
-    --size: calc(1.2rem + 0.2 * (100vw - 50rem) / (90 - 50));
-  }
-}
-
-/* Large and Up */
-@media (min-width: 75em) {
-  :root {
-    --size: 1.4rem;
-  }
 }

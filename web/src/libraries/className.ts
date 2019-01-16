@@ -1,4 +1,5 @@
-import { reduce, toPairs } from 'lodash';
+import reduce from 'lodash-es/reduce';
+import toPairs from 'lodash-es/toPairs';
 
 /**
  * Takes a camelcase string and returns a dasherized string

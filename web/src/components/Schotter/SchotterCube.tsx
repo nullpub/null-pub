@@ -35,5 +35,5 @@ export const SchotterCube: React.SFC<SchotterCubeProps> = ({ index, total }) => 
   };
   const shift = () => setState(generateTransforms());
 
-  return <section style={style} className={`ba-1 bs-solid schotter-cube`} onMouseOver={shift} />;
+  return <section style={style} className={`bwa-1 bs-solid schotter-cube`} onMouseOver={shift} />;
 };

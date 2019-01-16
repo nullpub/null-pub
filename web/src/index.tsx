@@ -1,14 +1,15 @@
-import './polyfills';
 import * as React from 'react';
 import { render } from 'react-dom';
 import { Location } from 'history';
-import { find } from 'lodash';
+import find from 'lodash-es/find';
+
+import './styles/main.css';
 
 import { history } from './libraries/history';
 
-import { HomePage } from './pages/HomePage';
+import HomePage from './pages/HomePage';
 import TestPage from './pages/TestPage';
-import { ErrorPage } from './pages/ErrorPage';
+import ErrorPage from './pages/ErrorPage';
 
 const container = document.getElementById('app');
 
