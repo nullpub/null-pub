@@ -4090,48 +4090,6 @@
 	        react_1(Schotter, __assign({}, schotterProps))));
 	};
 
-	var FontTest = function (_a) {
-	    var size = _a.size;
-	    return (react_1("header", { className: size + " fld-column" },
-	        react_1("p", null, size),
-	        react_1("h1", null, "h1"),
-	        react_1("h2", null, "h2"),
-	        react_1("h3", null, "h3"),
-	        react_1("h4", null, "h4"),
-	        react_1("h5", null, "h5"),
-	        react_1("h6", null, "h6"),
-	        react_1("p", null, "p")));
-	};
-	var CircleTest = function (_a) {
-	    var size = _a.size, bigTheme = _a.bigTheme, smallTheme = _a.smallTheme;
-	    return (react_1("div", { className: "fld-row fwu-2", style: {
-	            width: "" + size,
-	            height: "" + size,
-	            minWidth: "" + size,
-	            minHeight: "" + size,
-	            fontSize: "calc(" + size + " / 2)",
-	            position: 'relative',
-	            marginTop: "calc(" + size + " * 0.08)",
-	            marginRight: "calc(" + size + " * 0.08)",
-	        } },
-	        react_1("div", { className: bigTheme + " fsu-2 bra-c fls-1-1 flai-center fljc-center", style: { display: 'grid' } }, "H"),
-	        react_1("div", { className: smallTheme + " fsd-5 fw-0 flai-center fljc-center bwa-2 bra-c", style: { display: 'grid', position: 'absolute', top: '-8%', right: '-8%', width: '40%', height: '40%' } }, size)));
-	};
-	/**
-	 * @render react
-	 * @name TestPage
-	 * @example
-	 * <TestPage label="Hello World" />
-	 */
-	var TestPage = function () {
-	    return (react_1("article", { className: "page-test pa-5 fld-column flg-4" },
-	        react_1("section", { className: "fld-row flg-6 fljc-space-between bwa-1 bra-1 pa-4 ctr-primary doa-auto" },
-	            [5, 4, 3, 2, 1].map(function (x) { return (react_1(FontTest, { key: "fsd-" + x, size: "fsd-" + x })); }),
-	            react_1(FontTest, { key: "fs-0", size: "fs-0" }),
-	            [1, 2, 3, 4, 5].map(function (x) { return (react_1(FontTest, { key: "fsu-" + x, size: "fsu-" + x })); })),
-	        react_1("section", { className: "fld-row flg-6 fljc-space-between bwa-1 bra-1 pa-4 ctr-primary doa-auto" }, [50, 100, 150, 200, 250, 300].map(function (s) { return (react_1(CircleTest, { size: s + "px", bigTheme: "ct-warning", smallTheme: "ctr-warning" })); }))));
-	};
-
 	/**
 	 * @render react
 	 * @name ErrorPage
@@ -4141,11 +4099,8 @@
 	var ErrorPage = function () { return (react_1("article", { className: "page-error" },
 	    react_1("h1", { className: "ct-error ctr-error-hover ba-1 px-5 py-3 mtm-25p", onClick: function () { return history.push('/'); } }, "Oops! An Error!"))); };
 
-	var container = document.getElementById('app');
-	var routes = [
-	    { path: '/', action: function () { return react_1(HomePage, { title: "null.pub" }); } },
-	    { path: '/test', action: function () { return react_1(TestPage, null); } },
-	];
+	var container = document.getElementById("app");
+	var routes = [{ path: "/", action: function () { return react_1(HomePage, { title: "nll.sh" }); } }];
 	var r$1 = function (l) {
 	    var page = find(routes, function (r) { return r.path === l.pathname; });
 	    if (page !== undefined) {
@@ -4157,4 +4112,4 @@
 	history.listen(r$1);
 
 }());
-//# sourceMappingURL=bundle-rnn5j.js.map
+//# sourceMappingURL=bundle-hi1vl.js.map
