@@ -23,6 +23,10 @@
       {
         "source": "**",
         "destination": "/index.html"
+      },
+      {
+        "source": "/spellbook",
+        "function": "spellbook"
       }
     ]
   },
