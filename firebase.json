@@ -10,10 +10,6 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
-        "source": "/spellbook/**",
-        "function": "spellbook"
-      },
-      {
         "source": "**",
         "destination": "/index.html"
       }
